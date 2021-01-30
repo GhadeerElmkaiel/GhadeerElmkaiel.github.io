@@ -7,7 +7,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/projects.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-		<style>
+		<!--style>
 			.column {
 				float: left;
 				width: 33.33%;
@@ -25,6 +25,124 @@
 			margin-left: auto;
 			margin-right: auto;
 			width: 70%;
+			}
+		</style-->
+		<style>
+			body {
+			font-family: Arial;
+			margin: 0;
+			}
+
+			* {
+			box-sizing: border-box;
+			}
+
+			img {
+			vertical-align: middle;
+			}
+
+			/* Position the image container (needed to position the left and right arrows) */
+			.container {
+			position: relative;
+			}
+
+			/* Hide the images by default */
+			.mySlides {
+			display: none;
+			}
+
+			/* Add a pointer when hovering over the thumbnail images */
+			.cursor {
+			cursor: pointer;
+			}
+
+			/* Next & previous buttons */
+			.prev,
+			.next {
+			cursor: pointer;
+			position: absolute;
+			top: 40%;
+			width: auto;
+			padding: 16px;
+			margin-top: -50px;
+			color: rgb(48, 43, 43);
+			font-weight: bold;
+			font-size: 20px;
+			border-radius: 0 3px 3px 0;
+			user-select: none;
+			-webkit-user-select: none;
+			}
+
+			/* Position the "next button" to the right */
+			.next {
+			right: 5.0%;
+			border-radius: 3px 0 0 3px;
+			}
+
+			/* On hover, add a black background color with a little bit see-through */
+			.prev:hover,
+			.next:hover {
+			background-color: rgba(10, 10, 10, 0.8);
+			}
+
+			/* Number text (1/3 etc) */
+			.numbertext {
+			color: #c2c2c2;
+			font-size: 15px;
+			margin-left: auto;
+			margin-right: auto;
+			padding: 8px 12px;
+			position: absolute;
+			top: 0;
+			}
+
+			/* Container for image text */
+			.caption-container {
+			text-align: center;
+			background-color: #222;
+			padding: 2px 36px;
+			color: white;
+			}
+
+			.row:after {
+			content: "";
+			display: table;
+			clear: both;
+			}
+
+			/* Six columns side by side */
+			.column {
+			float: left;
+			width: 20%;
+			}
+
+			/* Add a transparency effect for thumnbail images */
+			.demo {
+			opacity: 0.6;
+			}
+
+			.active,
+			.demo:hover {
+			opacity: 1;
+			}
+
+			.center {
+			display: block;
+			margin-left: auto;
+			margin-right: auto;
+			width: 50%;
+			}
+			.center_tele {
+			display: block;
+			margin-left: auto;
+			margin-right: auto;
+			width: 35%;
+			}
+			.center_img {
+			display: block;
+			margin-left: auto;
+			margin-right: auto;
+			height: 600PX;
 			}
 		</style>
 	</head>
@@ -124,7 +242,8 @@
 								<br/>
 								<a href="#"><img src="images/Snakes_2.png" alt="Snake Simulator" class="center"/></a>
 								
-							</article><article class="post featured">
+							</article>
+							<article class="post featured">
 								<header class="major">
 									<span class="date">2019-2020</span>
 									<h2><a href="#">Masters project</a></h2>
@@ -142,7 +261,7 @@
 								</p>
 								<br/>								
 							</article>
-							</article><article class="post featured">
+							<article class="post featured">
 								<header class="major">
 									<span class="date">2018-ongiong</span>
 									<h2><a href="#">Different Projects</a></h2>
@@ -155,14 +274,68 @@
 								</p>
 								<br/>				
 								<br/>
-								<h2><a href="#">Telegram bot for changing image style</a></h2>
-								<a href="#"><img src="" alt="Telegram Bot" class="center"/></a>
+								<h2><a href="https://github.com/GhadeerElmkaiel/Telegram-Bot">Telegram bot for changing image style</a></h2>
+								<a href="https://github.com/GhadeerElmkaiel/Telegram-Bot"><img src="/images/Telegram_bot_phone_1.png" alt="Telegram Bot" class="center_tele"/></a>
 								<br/>
-								<p> More details are comming.
+								<p> I Programmed a telegram bot for applying style transfer on user images. <br/>
+									The user can choose the style image and the image to change.<br/>
 
-								</p>
-								<br/>								
+
+								</p>							
 							</article>
+							<div class="container">
+								<div class="mySlides">
+									<div class="numbertext">1 / 5</div>
+									<img src="images/Telegram_bot_1.png" style="height:600px" class="center_img">
+								</div>
+								
+								<div class="mySlides">
+									<div class="numbertext">2 / 5</div>
+									<img src="images/Telegram_bot_2.png" style="height:600px" class="center_img">
+								</div>
+								
+								<div class="mySlides">
+									<div class="numbertext">3 / 5</div>
+									
+									<img src="images/Telegram_bot_3.png" style="height:600px" class="center_img">
+								</div>
+									
+								<div class="mySlides">
+									<div class="numbertext">4 / 5</div>
+									<img src="images/Telegram_bot_phone_2.png" style="height:600px" class="center_img">
+								</div>
+								
+								<div class="mySlides">
+									<div class="numbertext">5 / 5</div>
+									<img src="images/Telegram_bot_phone_3.png" style="height:600px" class="center_img">
+								</div>
+		
+								<a class="prev" onclick="plusSlides(-1)">❮</a>
+								<a class="next" onclick="plusSlides(1)">❯</a>
+								
+								<div class="caption-container">
+									<p id="caption"></p>
+								</div>
+								
+								<div class="row">
+									<div class="column">
+									<img class="demo cursor" src="images/Telegram_bot_1.png" style="width:100%" onclick="currentSlide(1)" alt="Step 1">
+									</div>
+									<div class="column">
+									<img class="demo cursor" src="images/Telegram_bot_2.png" style="width:100%" onclick="currentSlide(2)" alt="Step 2">
+									</div>
+									<div class="column">
+									<img class="demo cursor" src="images/Telegram_bot_3.png" style="width:100%" onclick="currentSlide(3)" alt="Step 3">
+									</div>
+									<div class="column">
+									<img class="demo cursor" src="images/Telegram_bot_phone_2.png" style="width:40%" onclick="currentSlide(4)" alt="Style transfer 1">
+									</div>
+									<div class="column">
+									<img class="demo cursor" src="images/Telegram_bot_phone_3.png" style="width:40%" onclick="currentSlide(5)" alt="Style transfer 2">
+									</div>    
+								</div>
+							</div>
+							<br/>	
 							
 						</div>
 		
@@ -199,4 +372,34 @@
 				<script src="assets/js/main.js"></script>
 	
 		</body>
+		<script>
+			var slideIndex = 1;
+			showSlides(slideIndex);
+			
+			function plusSlides(n) {
+			  showSlides(slideIndex += n);
+			}
+			
+			function currentSlide(n) {
+			  showSlides(slideIndex = n);
+			}
+			
+			function showSlides(n) {
+			  var i;
+			  var slides = document.getElementsByClassName("mySlides");
+			  var dots = document.getElementsByClassName("demo");
+			  var captionText = document.getElementById("caption");
+			  if (n > slides.length) {slideIndex = 1}
+			  if (n < 1) {slideIndex = slides.length}
+			  for (i = 0; i < slides.length; i++) {
+				  slides[i].style.display = "none";
+			  }
+			  for (i = 0; i < dots.length; i++) {
+				  dots[i].className = dots[i].className.replace(" active", "");
+			  }
+			  slides[slideIndex-1].style.display = "block";
+			  dots[slideIndex-1].className += " active";
+			  captionText.innerHTML = dots[slideIndex-1].alt;
+			}
+		</script>
 	</html>
